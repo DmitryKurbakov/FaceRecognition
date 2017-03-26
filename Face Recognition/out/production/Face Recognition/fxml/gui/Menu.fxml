@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="187.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.controller.MenuController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem onAction="#onButtonStartRec" mnemonicParsing="false" text="Start Recognition" />
+                <MenuItem onAction="#onExitButton" mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="python interpreter:" />
+            <TextField fx:id="txtPython" editable="false" layoutX="174.0" layoutY="15.0" prefHeight="25.0" prefWidth="274.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="455.0" layoutY="15.0" mnemonicParsing="false" onAction="#onChangeButton" prefHeight="25.0" prefWidth="60.0" text="Change">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="55.0" text="Training set:" />
+            <TextField fx:id="txtTrSet" editable="false" layoutX="174.0" layoutY="56.0" prefHeight="25.0" prefWidth="229.0">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="411.0" layoutY="56.0" mnemonicParsing="false" text="Change">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnStartRec" layoutX="175.0" layoutY="95.0" mnemonicParsing="false" onAction="#onButtonStartRec" prefHeight="39.0" prefWidth="189.0" text="Start recognition" />
+            <Button layoutX="371.0" layoutY="95.0" mnemonicParsing="false" onAction="#onExitButton" prefHeight="39.0" prefWidth="147.0" text="Exit" />
+            <Button onAction="#onTrainButton" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" text="Train">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
